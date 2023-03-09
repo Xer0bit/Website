@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Ошибка перевода</title>
+<link href="https://yastatic.net/s3/translate/v87.3/dist/styles/misc/tr_page_error.css" rel="stylesheet">
+<script type="text/javascript">
+if (window.location.pathname !== '/error') {
+window.parent.postMessage(JSON.stringify({
+type: 'error',
+data: {
+href: window.location.href,
+error: 'DownloaderResponseError.NotFound',
+message: 'Zora: code: 404, message: Not Found',
+
+originalUrl: window.decodeURIComponent('https://www.classcentral.com/report/wp-json/wp/v2/users/0')
+
+}
+}), '*');
+}
+window.addEventListener('message', function(event) {
+if (event.data !== 'theme-night') return;
+var errorElement = document.querySelector('.error');
+var linkElement = document.querySelector('a');
+var nightTheme = {
+bg: '#252427',
+color: '#bdbdbd',
+linkColor: '#f2c82b',
+};
+errorElement.style.background = nightTheme.bg;
+errorElement.style.color = nightTheme.color;
+linkElement.style.color = nightTheme.linkColor;
+});
+</script>
+</head>
+<body>
+<div class="error">
+<div class="error-icon">
+<img src="https://yastatic.net/s3/translate/v87.3/i/misc/tr-url-error.svg" loading="lazy" />
+</div>
+<div class="error-heading">Не удалось перевести страницу</div>
+<div class="error-text">Если в интернете есть другая страница с нужным вам содержанием, попробуйте перевести её.</div>
+<div
+class="error-text">
+<a
+href="https://ya.ru"
+target="_top">
+Искать в Яндексе
+</a>
+</div>
+</div>
+<!-- ################################ -->
+<!-- Error: DownloaderResponseError.NotFound -->
+<!-- Message: Zora: code: 404, message: Not Found -->
+
+<!-- ################################ -->
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Translation error</title>
+<link href="https://yastatic.net/s3/translate/v87.3/dist/styles/misc/tr_page_error.css" rel="stylesheet">
+<script type="text/javascript">
+if (window.location.pathname !== '/error') {
+window.parent.postMessage(JSON.stringify({
+type: 'error',
+data: {
+href: window.location.href,
+error: 'DownloaderResponseError.NotFound',
+message: 'Zora: code: 404, message: Not Found',
+
+originalUrl: window.decodeURIComponent('https://www.classcentral.com/report/author/page/2/')
+
+}
+}), '*');
+}
+window.addEventListener('message', function(event) {
+if (event.data !== 'theme-night') return;
+var errorElement = document.querySelector('.error');
+var linkElement = document.querySelector('a');
+var nightTheme = {
+bg: '#252427',
+color: '#bdbdbd',
+linkColor: '#f2c82b',
+};
+errorElement.style.background = nightTheme.bg;
+errorElement.style.color = nightTheme.color;
+linkElement.style.color = nightTheme.linkColor;
+});
+</script>
+</head>
+<body>
+<div class="error">
+<div class="error-icon">
+<img src="https://yastatic.net/s3/translate/v87.3/i/misc/tr-url-error.svg" loading="lazy" />
+</div>
+<div class="error-heading">Unable to translate page</div>
+<div class="error-text">You can try to translate another page.</div>
+<div
+class="error-text">
+<a
+href="https://yandex.com"
+target="_top">
+Search with Yandex
+</a>
+</div>
+</div>
+<!-- ################################ -->
+<!-- Error: DownloaderResponseError.NotFound -->
+<!-- Message: Zora: code: 404, message: Not Found -->
+
+<!-- ################################ -->
+</body>
+</html>
